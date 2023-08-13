@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello world python django!!!</h1>
+
+<form method="POST">
+    {%csrf_token%}
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <input type="text" value="{{data.name}}" placeholder="Enter Name" name="name"><br>
+    <input type="text" value="{{data.email}}"  placeholder="Enter Email" name="email"><br>
+    <input type="password" value="{{data.password}}"  placeholder="Enter Password" name="password" ><br>
+    <input type="tel" value="{{data.number}}" placeholder="Enter number" name="number"><br>
+    <input type="number" value="{{data.pCode}}"  placeholder="Enter pin Code" name="pCode"><br>
+
+    Gender:<br>
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female<br>
+
+    Enter Your Address:<br>
+    <textarea  name="address" rows="2" cols="20" >{{data.address}}</textarea><br>
+    Hobbey's please:<br>
+    <textarea name="hobbey" rows="2" cols="20">{{data.hobbey}}</textarea><br>
+
+
+    <label for="state">Select State:</label>
+    <select name="state"  id="state">
+        <option value="U.P">U.P</option>
+        <option value="G.J">G.J</option>
+        <option value="M.P">M.P</option>
+        <option value="M.H">M.H</option>
+    </select><br>
+
+
+
+
+    <button type="submit">Update</button>
+</form>
+
+<a href="second">goto second page</a>
+</body>
+</html>
